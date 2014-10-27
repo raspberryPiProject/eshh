@@ -17,4 +17,8 @@ h3.title{
 	color:#777777;
 	text-shadow: 0 1px #e7e7e7;
 }
-
+p {
+	font: bold 12px 'Allerta', sans-serif;
+	color:#777777;
+	text-shadow: 0 1px #e7e7e7;
+}

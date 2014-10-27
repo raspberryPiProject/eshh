@@ -1,20 +1,3 @@
-<!-- JS-Includes for timepicker -->
-<script type="text/javascript" src="http://cdn.jtsage.com/external/jquery.mousewheel.min.js"></script>
-<script type="text/javascript" src="http://dev.jtsage.com/jQM-DateBox/js/doc.js"></script>
-<script type="text/javascript" src="http://cdn.jtsage.com/datebox/1.4.4/jqm-datebox-1.4.4.core.min.js"></script>
-<script type="text/javascript" src="http://cdn.jtsage.com/datebox/1.4.4/jqm-datebox-1.4.4.mode.calbox.min.js"></script>
-<script type="text/javascript" src="http://cdn.jtsage.com/datebox/1.4.4/jqm-datebox-1.4.4.mode.datebox.min.js"></script>
-<script type="text/javascript" src="http://cdn.jtsage.com/datebox/1.4.4/jqm-datebox-1.4.4.mode.flipbox.min.js"></script>
-<script type="text/javascript" src="http://cdn.jtsage.com/datebox/1.4.4/jqm-datebox-1.4.4.mode.slidebox.min.js"></script>
-<script type="text/javascript" src="http://cdn.jtsage.com/datebox/1.4.4/jqm-datebox-1.4.4.mode.customflip.min.js"></script>
-<script type="text/javascript" src="http://cdn.jtsage.com/datebox/i18n/jqm-datebox.lang.utf8.js"></script>
-<script type="text/javascript">
-jQuery.extend(jQuery.mobile,
-{
-  ajaxEnabled: false
-});
-</script>
-
 
 <?php
 		//Fehler-Array	
