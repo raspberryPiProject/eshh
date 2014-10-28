@@ -13,15 +13,21 @@ require_once("classDB.php");
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<!-- Stylesheet -->
-		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 		<link rel="stylesheet" href="http://cdn.jtsage.com/datebox/1.4.4/jqm-datebox-1.4.4.min.css" />
+				<link rel="stylesheet" type="text/css" href="css/timeline.css">
+		
 		<!-- Java-Script-->
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>		
 		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.js"></script>
 		<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>	
-		<script type="text/javascript" src="js/timeflipbox.js"></script>
+		 <script type="text/javascript" src="http://cdn.jtsage.com/datebox/1.4.4/jqm-datebox-1.4.4.mode.calbox.min.js"></script>
+		<script type="text/javascript" src="js/timeflipbox.js"></script>		
+		<script type="text/javascript" src="js/timeline.js"></script>
+		<script type="text/javascript" src="js/calendarbox.js"></script>
+		
 		<!-- Title -->		
 		<title>Raspbi Futtersteuerung</title>		
 	</head>
@@ -35,8 +41,7 @@ require_once("classDB.php");
 			</div>
 			<!-- content -->	
 			<div data-role="content" >
-				<?php  include("content.php");?>	
-				<?php include("foodStatus.php");?>				
+				<?php  include("content.php");?>			
 			</div>			
 			<!-- footer -->
 			<div data-role = "footer" data-theme="a" data-position="fixed"><h3 class = "footer">(c) N. Gobbo, R. Ziegler</h3></div>				

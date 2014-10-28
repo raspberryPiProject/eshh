@@ -73,6 +73,14 @@ CREATE TABLE IF NOT EXISTS `movement` (
   `TIME` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
+--
+-- Daten für Tabelle `movement`
+--
+
+INSERT INTO `movement` (`ID`, `DATE`, `TIME`) VALUES
+(1, '2014-10-27', '05:00:00'),
+(2, '2014-10-27', '10:00:00');
+
 -- --------------------------------------------------------
 
 --

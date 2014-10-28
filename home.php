@@ -49,9 +49,10 @@ border-left-width: 0;
 		<li><a href="index.php?page=settings" class="ui-btn ui-icon-star ui-btn-icon-left">allgemeine Einstellungen</a></li>
     </ul>
   </div>
-  <li><a href="#" class="ui-btn ui-icon-video ui-btn-icon-left">Bewegungsmelder</a></li>
+  <li><a href="index.php?page=movementDetection" class="ui-btn ui-icon-video ui-btn-icon-left">Bewegungsmelder</a></li>
   <li><a href="index.php?page=foodDirect" class="ui-btn ui-icon-navigation ui-btn-icon-left">Futterausgabe</a></li>
   <li><a href="#" class="ui-btn ui-icon-info ui-btn-icon-left">Hilfe</a></li>  
 </ul>
 
+<?php include("foodStatus.php");?>		
        

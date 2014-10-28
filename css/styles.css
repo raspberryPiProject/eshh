@@ -1,0 +1,24 @@
+h1 {
+	font: bold 27px 'Allerta', sans-serif;
+	text-align:center;
+	color:#777777;
+	text-shadow: 0 1px #e7e7e7;
+}
+
+h3.footer {
+	font: bold 25px 'Allerta', sans-serif;
+	text-align:center;
+	color:#777777;
+	text-shadow: 0 1px #e7e7e7;
+}
+h3.title{
+	font: bold 16px 'Allerta', sans-serif;
+	text-align:center;
+	color:#777777;
+	text-shadow: 0 1px #e7e7e7;
+}
+p {
+	font: bold 12px 'Allerta', sans-serif;
+	color:#777777;
+	text-shadow: 0 1px #e7e7e7;
+}
