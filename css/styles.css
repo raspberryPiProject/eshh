@@ -5,8 +5,14 @@ h1 {
 	text-shadow: 0 1px #e7e7e7;
 }
 
-h3.footer {
+h2 {
 	font: bold 25px 'Allerta', sans-serif;
+	text-align:center;
+	color:#777777;
+	text-shadow: 0 1px #e7e7e7;
+}
+h3.footer {
+	font: bold 23px 'Allerta', sans-serif;
 	text-align:center;
 	color:#777777;
 	text-shadow: 0 1px #e7e7e7;

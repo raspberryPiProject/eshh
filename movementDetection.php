@@ -1,21 +1,41 @@
 <?php
+	require_once("classDB.php");
+	
+	//Fehler-Array	
+	$errors = array();
+	$error = "";
+	
+?>
 
-//Fehler-Array	
-$errors = array();
-$error = "";
-
-
-/****** Leider funktioniert Formular-Uebergabe noch nicht, Timeline wird einfach nicht angezeigt :( $
-deshalb noch fixes Datum
-2Do: datePicker.php muss noch dazwischen geschaltet werden
-
-*****/
+<!DOCTYPE html>
+<html>
+	<head>			
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<!-- Stylesheet -->
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/timeline.css">
+		
+		<!-- Java-Script-->			
+		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>	
+		<script type="text/javascript" src="js/timeline.js"></script>	
+		
+		<!-- Title -->		
+		<title>Raspbi Futtersteuerung</title>		
+	</head>
+	<body onload="drawVisualization();">
+	<h1>Bewegungsmeldungen</h1>
+<?php
 
 //Überprüfung ob Formular abgeschickt wurde
-///if(isset($_POST['submit']) && $_POST['submit']=='Senden'){		
+if(isset($_POST['submit']) && $_POST['submit']=='Senden'){		
 
 
-	$date = "27.10.2014";
+	$date = $_POST['date'];
+	
+	echo "<h2>Datum: ".$date."</h2>";
 	$date = date('Y', strtotime($date))."-".date('m', strtotime($date))."-".date('d', strtotime($date));
 	
 	if($date=="")
@@ -64,33 +84,39 @@ deshalb noch fixes Datum
 		$minMonth = date('m', strtotime($date))-1;
 		$minDay = date('d', strtotime($date));
 		$maxDay = date('d', strtotime($date))+1;
-		//}}
-	}
+	
+
 ?>
+		<script type="text/javascript">
+				var timeline;	
+				function drawVisualization() {
+					// create and populate an array with data
+					var data = <?php echo $json_encode; ?>;	
+					
+					// specify options
+					var options = {
+						"width":  "100%",
+						"height": "300px",
+						"min": new Date(<?php echo $minYear.",".$minMonth.",".$minDay;?>),                // lower limit of visible range
+						"max": new Date(<?php echo $minYear.",".$minMonth.",".$maxDay;?>),                // upper limit of visible range
+						"zoomMin": 1000 * 60 * 60 * 24,             // one day in milliseconds
+						"zoomMax": 1000 * 60 * 60 * 24 * 31 * 3     // about three months in milliseconds
+					};
 
-<script type="text/javascript">
-	var timeline;	
-	function drawVisualization() {
-		// create and populate an array with data
-		var data = <?php echo $json_encode; ?>;	
-		
-		// specify options
-		var options = {
-			"width":  "100%",
-			"height": "300px",
-			"min": new Date(<?php echo $minYear.",".$minMonth.",".$minDay;?>),                // lower limit of visible range
-			"max": new Date(<?php echo $minYear.",".$minMonth.",".$maxDay;?>),                // upper limit of visible range
-			"zoomMin": 1000 * 60 * 60 * 24,             // one day in milliseconds
-			"zoomMax": 1000 * 60 * 60 * 24 * 31 * 3     // about three months in milliseconds
-		};
+					// Instantiate our timeline object.
+					timeline = new links.Timeline(document.getElementById('mytimeline'), options);
 
-		// Instantiate our timeline object.
-		timeline = new links.Timeline(document.getElementById('mytimeline'), options);
-
-		// Draw our timeline with the created data and options
-		timeline.draw(data);
+					// Draw our timeline with the created data and options
+					timeline.draw(data);
+				}
+		</script>
+		<div id="mytimeline"></div>
+<?php
 	}
-</script>
-<body onload="drawVisualization();">
-	<div id="mytimeline"></div>
-</body>
+}
+?>
+	
+	</body>
+</html>
+
+
