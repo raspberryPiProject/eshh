@@ -1,4 +1,4 @@
-1. Lighttpd, PHP und Mysql installieren
+﻿1. Lighttpd, PHP und Mysql installieren
 http://www.gtkdb.de/index_36_2452.html
 
 

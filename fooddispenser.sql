@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.2.7.1
 -- http://www.phpmyadmin.net
 --
@@ -91,24 +91,25 @@ CREATE TABLE IF NOT EXISTS `schedule` (
 `ID` int(11) NOT NULL,
   `TIME` time DEFAULT NULL,
   `AMOUNT` int(11) DEFAULT NULL,
-  `ACTIVE` tinyint(1) NOT NULL
+  `ACTIVE` tinyint(1) NOT NULL,
+  `CRONJOBID` varchar(8) NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Daten für Tabelle `schedule`
 --
 
-INSERT INTO `schedule` (`ID`, `TIME`, `AMOUNT`, `ACTIVE`) VALUES
-(1, '05:00:00', 20, 1),
-(2, '07:00:00', 40, 1),
-(3, '00:00:00', 0, 0),
-(4, '00:00:00', 0, 0),
-(5, '00:00:00', 0, 0),
-(6, '00:00:00', 0, 0),
-(7, '00:00:00', 0, 0),
-(8, '00:00:00', 0, 0),
-(9, '00:00:00', 0, 0),
-(10, '00:00:00', 0, 0);
+INSERT INTO `schedule` (`ID`, `TIME`, `AMOUNT`, `ACTIVE`, `CRONJOBID`) VALUES
+(1, '05:00:00', 20, 1, ''),
+(2, '07:00:00', 40, 1, ''),
+(3, '00:00:00', 0, 0, ''),
+(4, '00:00:00', 0, 0, ''),
+(5, '00:00:00', 0, 0, ''),
+(6, '00:00:00', 0, 0, ''),
+(7, '00:00:00', 0, 0, ''),
+(8, '00:00:00', 0, 0, ''),
+(9, '00:00:00', 0, 0, ''),
+(10, '00:00:00', 0, 0, '');
 
 -- --------------------------------------------------------
 

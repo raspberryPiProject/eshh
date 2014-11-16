@@ -6,6 +6,9 @@ if (!isset($_GET['page']))
 $page = $_GET['page'];
 
 require_once("classDB.php");
+require_once("cron/CronEntry.php");
+require_once("cron/CrontabManager.php");
+
 ?>
 <!DOCTYPE html>
 <html>
