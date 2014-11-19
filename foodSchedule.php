@@ -61,13 +61,14 @@
 						$minute = substr($times[1], 0,1) == 0 ? substr($times[1], 1,1) : $times[1];
 						$hour = substr($times[0], 0,1) == 0 ? substr($times[0], 1,1) : $times[0];
 						$job = $crontab->newJob();
-						$job->on($minute.' '.$hour.' * * *');
-						$job->doJob("/usr/bin/python /var/www/raspbi/python/stepper.py");
-						
+						$job->on($minute.' '.$hour.' * * *');		
+						$job->doJob("/usr/bin/python /var/www/raspbi/python/stepper.py ".$row["ID"]." 0");						
 						//Job-ID zwischenspeichern
 						$jobDetails = explode("#", $job);
 						$jobID = trim($jobDetails[1]);
-						$crontab->add($job);
+						$crontab->add($job);					
+						
+						
 					}
 									
 										
@@ -131,10 +132,9 @@
 						$time = substr($row['TIME'], 0, 5);
 						$amount = $row['AMOUNT'];
 					}
-					echo "<tr>\n";
-					/** Leider funktioniert timeflip-Box noch nicht, muss noch gefixt werden!!! ****/
-					//echo "\t<td><input type='text' name='time[]'  value = '".$time."' data-role=\"datebox\" data-options='{\"mode\":\"timeflipbox\", \"overrideTimeOutput\":\"%k:%M\", \"overrideTimeFormat\":12}' /></td>\n";		
-					echo "\t<td><input type='text' name='time[]'  value = '".$time."'/></td>\n";							
+					echo "<tr>\n";					
+					echo "\t<td><input type='text' name='time[]'  value = '".$time."' data-role=\"datebox\" data-options='{\"mode\":\"timeflipbox\", \"overrideTimeOutput\":\"%k:%M\", \"overrideTimeFormat\":12}' /></td>\n";		
+					//echo "\t<td><input type='text' name='time[]'  value = '".$time."'/></td>\n";							
 					echo "\t<td><input type='text' name='amount[]' value = '".$amount."' ></td>\n";
 					echo "\t</tr>\n";
 				}					

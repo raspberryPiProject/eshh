@@ -36,6 +36,8 @@
 								weight = ".mysql_real_escape_string($weight)." ".
 							"WHERE ID = 1";
 				$res = mysql_query($sql, $connection);		
+				//LED abloeschen
+				echo shell_exec ('sudo /usr/bin/python /var/www/raspbi/python/led.py 1');
 			}
 		}
 		else {

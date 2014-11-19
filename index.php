@@ -27,9 +27,9 @@ require_once("cron/CrontabManager.php");
 		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.js"></script>
 		<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>	
 		 <script type="text/javascript" src="http://cdn.jtsage.com/datebox/1.4.4/jqm-datebox-1.4.4.mode.calbox.min.js"></script>
-		<script type="text/javascript" src="js/timeflipbox.js"></script>		
 		<script type="text/javascript" src="js/timeline.js"></script>
-		<script type="text/javascript" src="js/calendarbox.js"></script>
+		<script type="text/javascript" src="js/calendarbox.js"></script>		
+		<script type="text/javascript" src="js/timeflipbox.js"></script>		
 		
 		<!-- Title -->		
 		<title>Raspbi Futtersteuerung</title>		

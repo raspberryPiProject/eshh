@@ -130,6 +130,19 @@ CREATE TABLE IF NOT EXISTS `settings` (
 INSERT INTO `settings` (`ID`, `NAME`, `SETTING`) VALUES
 (1, 'Email-Notification', 'natalie.gobbo@students.ffhs.ch');
 
+
+
+--
+-- Tabellenstruktur für Tabelle `log`
+--
+
+CREATE TABLE IF NOT EXISTS `log` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `DATE` date NOT NULL,
+  `TIME` time NOT NULL,
+  `ERROR` varchar(100) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_IN
 --
 -- Indexes for dumped tables
 --
@@ -196,3 +209,4 @@ MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
