@@ -94,11 +94,11 @@ with con:
 	rowFill = cur.fetchone()
 	fill = rowFill[0]
 	percentage = rowFill[1]
-	
-	#auszugebende Futtermenge ermitteln
-	cur.execute("SELECT AMOUNT FROM schedule WHERE ID = '" + str(jobid) + "'")
-	rowWeight = cur.fetchone()
-	weight = rowWeight[0]
+	if(directFeed == 0):
+		#auszugebende Futtermenge ermitteln
+		cur.execute("SELECT AMOUNT FROM schedule WHERE ID = '" + str(jobid) + "'")
+		rowWeight = cur.fetchone()
+		weight = rowWeight[0]
 	#Umdrehung/Gewichtseinheit holen
 	cur.execute("SELECT * FROM amount")
 	rowTurn = cur.fetchone()

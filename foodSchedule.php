@@ -62,7 +62,8 @@
 						$hour = substr($times[0], 0,1) == 0 ? substr($times[0], 1,1) : $times[0];
 						$job = $crontab->newJob();
 						$job->on($minute.' '.$hour.' * * *');		
-						$job->doJob("/usr/bin/python /var/www/raspbi/python/stepper.py ".$row["ID"]." 0");						
+						$job->doJob("sudo /usr/bin/python /var/www/raspbi/python/stepper.py ".$row["ID"]." 0");	
+				
 						//Job-ID zwischenspeichern
 						$jobDetails = explode("#", $job);
 						$jobID = trim($jobDetails[1]);
