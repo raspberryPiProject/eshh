@@ -42,15 +42,15 @@ border-left-width: 0;
 <ul data-role="listview" class="ui-listview-outer" data-inset="true">
   <div data-role="collapsible" data-iconpos="left" data-shadow="false" data-corners="false" data-collapsed-icon="gear" data-expanded-icon="gear">
     <h2>Einstellungen<span class="ui-li-count">4</span></h2>
-    <ul data-role="listview" data-shadow="false" data-inset="true" data-corners="false">
-		<li><a href="index.php?page=foodAmount" class="ui-btn ui-icon-cloud ui-btn-icon-left">Futtermenge</a></li>
-		<li><a href="index.php?page=foodSchedule" class="ui-btn ui-icon-clock ui-btn-icon-left">Fuetterungszeiten</a></li>
-		<li><a href="index.php?page=foodFill" class="ui-btn ui-icon-eye ui-btn-icon-left">Futterstandanzeige</a></li>
+    <ul data-role="listview" data-shadow="false" data-inset="true" data-corners="false">		
+		<li><a href="index.php?page=foodSchedule" class="ui-btn ui-icon-clock ui-btn-icon-left">F&uuml;tterungszeitplan</a></li>
+		<li><a href="index.php?page=foodAmount" class="ui-btn ui-icon-cloud ui-btn-icon-left">Futterausgabe Menge</a></li>
+		<li><a href="index.php?page=foodFill" class="ui-btn ui-icon-eye ui-btn-icon-left">Futterstand</a></li>
 		<li><a href="index.php?page=settings" class="ui-btn ui-icon-star ui-btn-icon-left">allgemeine Einstellungen</a></li>
     </ul>
   </div>
-  <li><a href="index.php?page=datePicker" class="ui-btn ui-icon-video ui-btn-icon-left">Bewegungsmelder</a></li>
-  <li><a href="index.php?page=foodDirect" class="ui-btn ui-icon-navigation ui-btn-icon-left">Futterausgabe</a></li>
+  <li><a href="index.php?page=datePicker" class="ui-btn ui-icon-video ui-btn-icon-left">Bewegungsmelder Statistik</a></li>
+  <li><a href="index.php?page=foodDirect" class="ui-btn ui-icon-navigation ui-btn-icon-left">Direkt-Futterausgabe</a></li>
   <li><a href="#" class="ui-btn ui-icon-info ui-btn-icon-left">Hilfe</a></li>  
 </ul>
 
