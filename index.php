@@ -15,22 +15,60 @@ require_once("cron/CrontabManager.php");
 	<head>			
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		
 		<!-- Stylesheet -->
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-		<link rel="stylesheet" href="http://cdn.jtsage.com/datebox/1.4.4/jqm-datebox-1.4.4.min.css" />
-				<link rel="stylesheet" type="text/css" href="css/timeline.css">
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.4.min.css" />
+		<link rel="stylesheet"  href="css/jquery.mobile.icons-1.4.2.css" />		
+		<link rel="stylesheet" href="css/jqm-datebox-1.4.4.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/timeline.css">
+		<link rel="stylesheet"  href="css/jqm-icon-pack-fa.css" />
+		
+		<!-- favicon -->		
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
 		
 		<!-- Java-Script-->
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>		
-		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.js"></script>
-		<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>	
-		 <script type="text/javascript" src="http://cdn.jtsage.com/datebox/1.4.4/jqm-datebox-1.4.4.mode.calbox.min.js"></script>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>		
+		<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.4.min.js"></script>
+		
 		<script type="text/javascript" src="js/timeline.js"></script>
 		<script type="text/javascript" src="js/calendarbox.js"></script>		
-		<script type="text/javascript" src="js/timeflipbox.js"></script>		
-		
+		<script type="text/javascript" src="js/timeflipbox.js"></script>			
+		<script type="text/javascript" src ="js/jqm-datebox-1.4.4.mode.calbox.min.js"></script>
+		<script>	
+			$(document).ajaxStart(function() {
+				$.mobile.loading( 'show', {
+					text: 'Futter wird ausgegeben....',
+					textVisible: true,
+					theme: 'z',
+					html: ""
+				});
+			});
+
+			$(document).ajaxStop(function() {
+				$.mobile.loading('hide');
+			});		
+			
+			function callScript() {
+			
+				$.ajax(
+				{        						
+					type:'POST',      
+					contentType: "application/json",	
+					url: 'foodDirect.php',
+					dataType: 'json',
+					success: function(data, textStatus, jqXHR)
+					{		
+						window.alert(data.msg);
+					},
+					error: function(jqXHR, textStatus, errorThrown) { 						
+						alert("Status: " + jqXHR.responseText); 
+					}       
+				});
+			}
+			
+		</script>
 		<!-- Title -->		
 		<title>Raspbi Futtersteuerung</title>		
 	</head>
@@ -45,9 +83,9 @@ require_once("cron/CrontabManager.php");
 			<!-- content -->	
 			<div data-role="content" >
 				<?php  include("content.php");?>			
-			</div>			
+			</div>				
 			<!-- footer -->
-			<div data-role = "footer" data-theme="a" data-position="fixed"><h3 class = "footer">(c) N. Gobbo, R. Ziegler</h3></div>				
+			<div data-role = "footer" data-theme="a" data-position="fixed"><h3 class = "footer">&copy; N. Gobbo, R. Ziegler</h3></div>				
 		</div>
 	</body>
 </html>

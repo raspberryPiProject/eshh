@@ -44,15 +44,21 @@ border-left-width: 0;
     <h2>Einstellungen<span class="ui-li-count">4</span></h2>
     <ul data-role="listview" data-shadow="false" data-inset="true" data-corners="false">		
 		<li><a href="index.php?page=foodSchedule" class="ui-btn ui-icon-clock ui-btn-icon-left">F&uuml;tterungszeitplan</a></li>
-		<li><a href="index.php?page=foodAmount" class="ui-btn ui-icon-cloud ui-btn-icon-left">Futterausgabe Menge</a></li>
-		<li><a href="index.php?page=foodFill" class="ui-btn ui-icon-eye ui-btn-icon-left">Futterstand</a></li>
-		<li><a href="index.php?page=settings" class="ui-btn ui-icon-star ui-btn-icon-left">allgemeine Einstellungen</a></li>
+		<li><a href="index.php?page=foodAmount" data-role="button" data-icon="dashboard">Einheit Futterausgabe</a></li>
+		<li><a href="index.php?page=foodFill" data-role="button" data-icon="bitbucket">Futterstand</a></li>
+		<li><a href="index.php?page=settings" data-role="button" data-icon="gears">allgemeine Einstellungen</a></li>
     </ul>
   </div>
-  <li><a href="index.php?page=datePicker" class="ui-btn ui-icon-video ui-btn-icon-left">Bewegungsmelder Statistik</a></li>
-  <li><a href="index.php?page=foodDirect" class="ui-btn ui-icon-navigation ui-btn-icon-left">Direkt-Futterausgabe</a></li>
-  <li><a href="#" class="ui-btn ui-icon-info ui-btn-icon-left">Hilfe</a></li>  
+  <div data-role="collapsible" data-iconpos="left" data-shadow="false" data-corners="false" data-collapsed-icon="eye" data-expanded-icon="eye">
+    <h2>Bewegungsmelder<span class="ui-li-count">3</span></h2>
+    <ul data-role="listview" data-shadow="false" data-inset="true" data-corners="false">		
+		<li><a href="index.php?page=movementStart" data-role="button" data-icon="camera">Bewegungsmelder starten</a></li>
+		<li><a href="index.php?page=movementStop" data-role="button" data-icon="power-off" data-ajax="false">Bewegungsmelder stoppen</a></li>
+		<li><a href="index.php?page=datePicker" data-role="button" data-icon="bar-chart-o">Statistik Bewegungsmelder</a></li>
+    </ul>
+  </div>  
+  <li><a href="#"  onclick="callScript()" data-role="button" data-icon="eject" >Direkt-Futterausgabe</a></li>
+  <li><a href="index.php?page=help" class="ui-btn ui-icon-info ui-btn-icon-left">Hilfe</a></li>  
 </ul>
-
 <?php include("foodStatus.php");?>		
        

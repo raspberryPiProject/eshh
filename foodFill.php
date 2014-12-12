@@ -5,7 +5,7 @@
 
 		
 		//Überprüfung ob Formular abgeschickt wurde
-		if(isset($_POST['submit']) && $_POST['submit']=='Senden'){	
+		if(isset($_POST['submit']) && $_POST['submit']=='Speichern'){	
 			
 			
 			$percentage = $_POST['fill'];
@@ -61,7 +61,7 @@
 <h3 class = "title">Futterstand</h3>
 <form action= "index.php?page=foodFill" method="post" enctype="multipart/form-data" name = "foodFill"> 
 	<div class = "ui-field-contain">
-		<label for="fill">Fuellstand (%):</label>
+		<label for="fill">F&uuml;llstand (%):</label>
 		<input type="range" name="fill" id="fill" value="<?php echo $percentage;?>" min="0" max="100" />
 	</div>
 	<div class = "ui-field-contain">
@@ -69,7 +69,7 @@
 		<input type="text" name= "weight" value = "<?php echo $weight;?>"/>
 	</div>	
 	<div class = "ui-field-contain">
-		<input type="submit" data-inline="true" name = "submit" value="Senden" >	
+		<input type="submit" data-inline="true" name = "submit" value="Speichern" >	
 	</div>	
 </form>
 

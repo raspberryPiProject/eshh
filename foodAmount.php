@@ -5,7 +5,7 @@
 
 		
 		//Überprüfung ob Formular abgeschickt wurde
-		if(isset($_POST['submit']) && $_POST['submit']=='Senden'){	
+		if(isset($_POST['submit']) && $_POST['submit']=='Speichern'){	
 			
 			
 			$turn = $_POST['turn'];
@@ -63,15 +63,15 @@
 <h3 class = "title">Futtermenge einstellen</h3>
 <form action= "index.php?page=foodAmount" method="post" enctype="multipart/form-data" name = "foodAmount"> 
 	<div data-role = "fieldcontain">
-		<label for="turn">Umdrehung: </label>
-		<input type="text" name="turn"  value = "<?php echo $turn ?>">
+		<label for="turn">Einheit (Umdrehung): </label>
+		<input type="text" name="turn"  value = "<?php echo $turn ?>" disabled >
 	</div>
 	<div data-role = "fieldcontain">
 		<label for="weight">Gramm: </label>
 		<input type="text" name="weight"  value = "<?php echo $weight ?>">
 	</div>
 	<div data-role = "fieldcontain">
-		<input type="submit" data-inline="true" name = "submit" value="Senden" >	
+		<input type="submit" data-inline="true" name = "submit" value="Speichern" >	
 	</div>		
 </form>
 

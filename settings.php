@@ -5,7 +5,7 @@
 
 		
 		//Überprüfung ob Formular abgeschickt wurde
-		if(isset($_POST['submit']) && $_POST['submit']=='Senden'){	
+		if(isset($_POST['submit']) && $_POST['submit']=='Speichern'){	
 			
 			
 			$percentage = $_POST['fill'];
@@ -79,7 +79,7 @@
 		}
 	?>	
 		<tr>
-			<td colspan = "2"><input type="submit" data-inline="true" name = "submit" value="Senden" >	</td>
+			<td colspan = "2"><input type="submit" data-inline="true" name = "submit" value="Speichern" >	</td>
 		</tr>
 		</tbody>
 	</table>

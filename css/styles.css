@@ -28,3 +28,15 @@ p {
 	color:#777777;
 	text-shadow: 0 1px #e7e7e7;
 }
+p.header {
+	font: bold 16px 'Allerta', sans-serif;
+	color:#000000;
+	text-shadow: 0 1px #e7e7e7;
+}
+
+p.header2 {
+	font: bold 18px 'Allerta', sans-serif;
+	color:#3388d2;
+	 text-decoration: underline;
+	text-shadow: 0 1px #e7e7e7;
+}

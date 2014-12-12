@@ -20,11 +20,20 @@
 	case 'foodDirect':
 		include('foodDirect.php');
 	break;
-	case 'movementDetection':
-		include('movementDetection.php');
+	case 'movementStart':
+		include('movementStart.php');
+	break;
+	case 'movementStop':
+		include('movementStop.php');
+	break;
+	case 'movementValue':
+		include('movementValue.php');
 	break;
 	case 'datePicker':
 		include('datePicker.php');
+	break;
+	case 'help':
+		include('help.php');
 	break;
 	default:
 		include('home.php');
