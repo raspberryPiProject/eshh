@@ -6,15 +6,10 @@
 		
 		//Überprüfung ob Formular abgeschickt wurde
 		if(isset($_POST['submit']) && $_POST['submit']=='Speichern'){	
+					
 			
-			
-			$turn = $_POST['turn'];
 			$weight = $_POST['weight'];
-			
-			if($turn == ""){
-				$errors[]= "Bitte geben Sie eine Umdrehungszahl ein.";			
-			}
-			
+						
 			if($weight == ""){
 				$errors[]= "Bitte geben Sie ein Gewicht ein.";			
 			}
@@ -33,14 +28,21 @@
 					$connection = $db->getConn();		
 					$db->selectDB();
 				}catch(Exception $e){
-					echo  $e->getMessage();
+					echo  "Es gab einen Fehler beim Abspeichern!";
 				}
 				
-				$sql = "UPDATE amount set turn = ".mysql_real_escape_string($turn).",
-								weight = ".mysql_real_escape_string($weight)." ".
+				$sql = "UPDATE amount set weight = ".mysql_real_escape_string($weight)." ".
 							"WHERE ID = 1";
-				$res = mysql_query($sql, $connection);		
+				$res = mysql_query($sql, $connection);	
+				
+				echo '<script type="text/javascript">'
+						   , 'window.alert("Die Futtereinheit wurde gespeichert");'
+						   ,'window.location = "index.php";'
+						   , '</script>';
+				echo "Weiterleitung...";
+				exit;
 			}
+			
 		}
 		else {
 			try{

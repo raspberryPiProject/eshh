@@ -6,5 +6,6 @@
 	fclose($file);	
 	exec('sudo kill '.$pid);
 	echo "Bewegungsmelder gestoppt!";
+	echo '<script type="text/javascript">window.location = "index.php";</script>';
 	
 ?>

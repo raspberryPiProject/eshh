@@ -96,6 +96,13 @@
 				
 				$crontab->save();
 				
+				echo '<script type="text/javascript">'
+						   , 'window.alert("Der Zeitplan wurde gespeichert");'
+						   ,'window.location = "index.php";'
+						   , '</script>';
+				echo "Weiterleitung...";
+				exit;
+				
 			}
 		}
 		
@@ -134,8 +141,9 @@
 						$amount = $row['AMOUNT'];
 					}
 					echo "<tr>\n";					
-					echo "\t<td><input type='text' name='time[]'  value = '".$time."' data-role=\"datebox\" data-options='{\"mode\":\"timeflipbox\", \"overrideTimeOutput\":\"%k:%M\", \"overrideTimeFormat\":12}' /></td>\n";		
-					//echo "\t<td><input type='text' name='time[]'  value = '".$time."'/></td>\n";							
+					echo "\t<td><input type='text' name='time[]'  value = '".$time."' data-role=\"datebox\" data-options='{\"mode\":\"timeflipbox\", \"overrideTimeOutput\":\"%k:%M\", 
+					\"overrideTimeFormat\":12, \"useClearButton\": true}' /></td>\n";		
+							
 					echo "\t<td><input type='text' name='amount[]' value = '".$amount."' ></td>\n";
 					echo "\t</tr>\n";
 				}					

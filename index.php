@@ -68,6 +68,7 @@ require_once("cron/CrontabManager.php");
 				});
 			}
 			
+			
 		</script>
 		<!-- Title -->		
 		<title>Raspbi Futtersteuerung</title>		

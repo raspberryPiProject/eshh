@@ -38,6 +38,12 @@
 				$res = mysql_query($sql, $connection);		
 				//LED abloeschen
 				echo shell_exec ('sudo /usr/bin/python /var/www/raspbi/python/led.py 1');
+				echo '<script type="text/javascript">'
+						   , 'window.alert("Der Futterstand wurde gespeichert");'
+						   ,'window.location = "index.php";'
+						   , '</script>';
+				echo "Weiterleitung...";
+				exit;
 			}
 		}
 		else {
